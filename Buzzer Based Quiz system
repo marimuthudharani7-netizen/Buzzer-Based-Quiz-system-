@@ -1,0 +1,25 @@
+DISCRIPTION:
+A buzzer-based quiz system allows participants to press a button, and the first one to respond activates a buzzer. It helps identify the fastest responder in quiz competitions.
+CODING:
+int button1 = 2;  
+int button2 = 3;  
+int buzzer = 8;  
+
+void setup() {
+  pinMode(button1, INPUT_PULLUP);
+  pinMode(button2, INPUT_PULLUP);
+  pinMode(buzzer, OUTPUT);
+}
+
+void loop() {
+  if (digitalRead(button1) == LOW) {
+    digitalWrite(buzzer, HIGH);
+    delay(2000);
+    digitalWrite(buzzer, LOW);
+  }
+  else if (digitalRead(button2) == LOW) {
+    digitalWrite(buzzer, HIGH);
+    delay(2000);
+    digitalWrite(buzzer, LOW);
+  }
+}
